@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Shop X</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="../../static/images/icons/logo-s1.png"/>
+	<link rel="stylesheet" type="text/css" href="../../static/css/main.css">
+
+</head>
+
+<body>
+<!-----intro----------->
+    <!-- Header -->
+	<header class="header1">
+		<!-- Header des -->
+		<div class="container-menu-header">
+			<div class="wrap_header">
+				<!-- Logo -->
+				<a href="Acceuil.html" class="logo">
+					<img src="../../static/images/icons/logo-s1.png" alt="IMG-LOGO">
+				</a>
+
+				<!-- Menu -->
+				<div class="wrap_menu">
+					<nav class="menu">
+						<ul class="main_menu">
+							<li>
+								<a href="shop.html">Boutique</a>
+								<ul class="sub_menu">
+									<li><a href="shop.html"> PC</a></li>
+									<li><a href="ecran.html"> ECRAN</a></li>
+									<li><a href="souris.html"> SOURIS</a></li>
+									<li><a href="clavier.html"> CLAVIER</a></li>
+								</ul>
+							</li>
+							<li class="sale-noti">
+								<a href="Acceuil.html">Accueil</a>
+							</li>
+							<li>
+								<a href="about.html">About</a>
+							</li>
+							<li>
+								<a href="contact.html">Contact</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<!-- Header Icon -->
+				<div class="header-icons">
+					<a href="{% url 'login' %}" class="header-wrapicon1 dis-block">
+						<img src="../../static/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+					</a>
+
+					<span class="linedivide1"></span>
+
+					<div class="header-wrapicon2">
+						<img src="../../static/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<span class="header-icons-noti">0</span>
+					</div>
+				</div>
+                <!-- Header Icon --> 
+			</div>
+		</div>	
+	</header>	
+
+	<div class="body-image">
+		<div id="particles-js"></div>
+<script src="../../static/js/particles.js"></script>
+<script src="../../static/js/app.js"></script>
+		<img src="../../static/images/banner1.png" class="bodyimage">
+		<div class="text1c">
+         <h1><Font color="crimson" size="+7"class="text1"> <pre></pre> Shop the BEST</Font></h1>
+		 <font color="White" size="+4" class="text2">Laptop & Computer <br>accessories ! </font>
+		</div>
+		<hr class="hr1">
+	</div>
+	</div>
+        
+	<section class="container">
+{% for pro_data in pro_data %}
+<div id="haut"></div>
+    <div class="card">
+			<div class="card-image pc"> </div>
+				<h2>{{pro_data.nom}}</h2>
+				<h2>{{pro_data.prix}}</h2>
+				<h2>{{pro_data.description}}</h2>
+				<h2>{{pro_data.image}}</h2>
+				<a href="{% url 'ajouterc' %}">Commander</a>
+			</div>
+
+	</div>
+{% endfor %}
+	</section>
+<!--  ----------------------------------------------------->
+<div id="bas"></div>
+<div class="ca">
+ <h1 class="h1c"><font color=#222222 > PRODUITS POPULAIRES</font></h1>
+<div class="slider-container">
+	<div class="menu3">
+	  <label for="slide-dot-1"></label>
+	  <label for="slide-dot-2"></label>
+	  <label for="slide-dot-3"></label>
+	  <label for="slide-dot-4"></label>
+	  <label for="slide-dot-5"></label>
+	</div>
+
+	<input class="slide-input" id="slide-dot-1" type="radio" name="slides" checked>
+	<img class="slide-img " src="../../static/images/pc10.png">
+
+	<input class="slide-input" id="slide-dot-2" type="radio" name="slides">
+	<img class="slide-img " src="../../static/images/pc11.png">
+	
+	<input class="slide-input" id="slide-dot-3" type="radio" name="slides">
+	<img class="slide-img " src="../../static/images/pc12.png">
+
+	<input class="slide-input" id="slide-dot-4" type="radio" name="slides">
+	<img class="slide-img " src="../../static/images/pc13.png">
+
+	<input class="slide-input" id="slide-dot-5" type="radio" name="slides">
+	<img class="slide-img " src="../../static/images/pc14.png">
+
+  </div>
+</div>
+
+<!--  ----------------------------------------------------->
+	<section class="info">
+		<div class="colonne">
+			<div class="p1">
+				<h4>
+					Livraison Gratuite Partout Dans le Monde
+				</h4>
+			</div>
+<span class="vertical-line"></span>
+			<div class="p2">
+				<h4>
+					30 jours pour effectuer un échange
+				</h4>
+
+				<span>
+					Renvoyez-le simplement dans les 30 jours pour un échange.
+				</span>
+
+				
+			</div>
+<span class="vertical-line"></span>
+			<div class="p3">
+				<h4>
+					Ouverture De La Boutique
+				</h4>
+
+				<span>
+					Boutique ouverte du lundi au dimanche.
+				</span>
+			</div>
+		</div>
+	</section>
+    
+    <!-- Footer -->
+	<footer class="footerr">
+            <div class="footerr1">
+				<ul>
+					<li class="p-b-9">
+						<a href="#" class="s-text7">
+						<font size="+1">	Contact Us :</font>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.instagram.com/mehdi_hayeg/">
+							<img src="../../static/images/icons/Instagram.png" alt="instagram" title="instagram" width="50" height="50" class="offset-4" /></a> 
+		                <a href="https://discord.gg/SJVrC7SYWG">					
+		                    <img src="../../static/images/icons/discord2.png" alt="discord" title="discord" width="50" height="50" class="offset-4" /></a> 	     
+			        </li>
+				</ul>	
+		    
+                
+					<hr class="hr2"> <br/><br/> 
+
+		<div class="t-center p-l-15 p-r-15">
+			<a href="#">
+				<img class="h-size2" src="../../static/images/icons/paypal.png" alt="IMG-PAYPAL">
+			</a>
+			<a href="#">
+				<img class="h-size2" src="../../static/images/icons/visa.png" alt="IMG-VISA">
+			</a>
+			<a href="#">
+				<img class="h-size2" src="../../static/images/icons/mastercard.png" alt="IMG-MASTERCARD">
+			</a>
+			<a href="#">
+				<img class="h-size2" src="../../static/images/icons/express.png" alt="IMG-EXPRESS">
+			</a>
+			<a href="#">
+				<img class="h-size2" src="../../static/images/icons/discover.png" alt="IMG-DISCOVER">
+			</a>
+			<div class="t-center s-text8 p-t-20">
+				<p>Copyright © 2022 All rights reserved. | Hayeg Mehdi & Moubarrad Ibtihal </p>
+			</div>
+		  </div>
+		</div>
+	</footer>
+
+</body>
+</html>

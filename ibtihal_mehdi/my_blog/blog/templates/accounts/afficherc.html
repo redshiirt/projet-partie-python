@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% csrf_token %}
+
+</head>
+<body>
+	{% block title %}
+      
+   <button class="b2">
+  <a href="{% url 'ajouterc' %}" class="a2"> <p class="p2">Ajouter une commande</p> </a>
+  <style>
+.b2{
+  background-color: #4b84fe;
+  border-radius: 15px;
+  border-style: none;
+  margin: 20px 20px 20px 0px;
+}
+.p2{
+  color: white;
+}
+.a2{
+  text-decoration: none;
+}
+
+  </style>
+   </button>
+<table id="customers">
+  <tr>
+<th>ID</th>
+<th>Description</th>
+<th>Quantité</th>
+<th> Prix</th>
+<th>Total</th>
+
+  </tr>
+  {% for pro in pro_data %}
+<tr>
+<td>{{pro.id_c}}</td>
+<td>{{pro.description}}</td>
+<td>{{pro.quantite}}</td>
+<td>{{pro.prix}}</td>
+<td>{{pro.total}}</td>
+{% endfor %}
+  </tr>
+  
+</table>
+{% endblock %}

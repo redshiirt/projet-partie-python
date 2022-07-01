@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Shop X</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="../../static/images/icons/logo-s1.png"/>
+</head>
+<body>
+  <style>
+    .login{
+  background-color: #e5e5e5;
+  display: block;
+  justify-content: center;
+  padding: 75px 200px 110px 200px;
+}
+
+  .login-form {
+  background: #fff;
+  width: 500px;
+  margin: 65px auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.login-form h1 {
+  padding: 35px 35px 0 35px;
+  font-weight: 300;
+}
+.login-form .content {
+  padding: 35px;
+  text-align: center;
+}
+.login-form .input-field {
+  padding: 12px 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+.login-form .input-field input {
+  font-size: 16px;
+  display: block;
+  font-family: 'Rubik', sans-serif;
+  width: 100%;
+  padding: 10px 1px;
+  border: 0;
+  border-bottom: 1px solid #747474;
+  outline: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.login-form a.link {
+  text-decoration: none;
+  color: #747474;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-top: 20px;
+}
+.login-form .action {
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+   flex-direction: row;
+}
+.login-form .action button {
+  width: 100%;
+  border: none;
+  padding: 18px;
+  font-family: 'Rubik', sans-serif;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: #e8e9ec;
+  color: #777;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 0;
+  letter-spacing: 0.2px;
+  outline: 0;
+  transition: all .3s;
+}
+.login-form .action button:hover {
+  background: #d8d8d8;
+}
+.login-form .action button:nth-child(2) {
+  background: crimson;
+  color: #fff;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 4px;
+}
+.login-form .action button:nth-child(2):hover {
+  background: #222222;
+}
+
+.limg{
+  position: relative;
+  left :600px;
+}
+
+.hr2 {
+  background-color: crimson;
+  width:30%;
+	position: absolute;
+  height: 3px;
+  border: none;
+  z-index: 5;
+ right: 650px;
+}
+
+.footerr{
+  padding: 20px;
+  position: relative;
+  
+  background-color: #222222;
+  width: 100%;
+}
+
+.footerr a{
+  color: #888888;
+}
+
+.footerr1{
+  text-align: center;
+}
+  </style>
+    <section class="login">
+		<img src="../../static/images/icons/logo-s1.png" width="250px" height="200px" class="limg">
+    <div class="login-form">
+        <form>
+          <font size="+2"><h1>Connectez vous :</h1></font>
+          <div class="content">
+            <div class="input-field">
+              <input type="email" placeholder="Email" autocomplete="nope">
+            </div>
+            <div class="input-field">
+              <input type="password" placeholder="Password" autocomplete="new-password">
+            </div>
+          </div>
+          <div class="action">
+            <button>Register</button>
+            <button> <a href="{% url 'afficher' %}">Sign in</a></button>
+          </div>
+        </form>
+      </div>
+</section>
+
+
+
+    
+    <!-- Footer -->
+	<footer class="footerr">
+            <div class="footerr1">
+				<ul>
+					<li class="p-b-9">
+						<a href="#" class="s-text7">
+						<font size="+1">	Contact Us :</font>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.instagram.com/mehdi_hayeg/">
+							<img src="../../static/images/icons/Instagram.png" alt="instagram" title="instagram" width="50" height="50" class="offset-4" /></a> 
+		                <a href="https://discord.gg/SJVrC7SYWG">					
+		                    <img src="../../static/images/icons/discord2.png" alt="discord" title="discord" width="50" height="50" class="offset-4" /></a> 	     
+			        </li>
+				</ul>	
+		    
+                
+					<hr class="hr2"> <br/><br/> 
+
+		<div class="t-center p-l-15 p-r-15">
+			<a href="#">
+				<img class="h-size2" src="../../static/images/icons/paypal.png" alt="IMG-PAYPAL">
+			</a>
+			<a href="#">
+				<img class="h-size2" src="../../static/images/icons/visa.png" alt="IMG-VISA">
+			</a>
+			<a href="#">
+				<img class="h-size2" src="../../static/images/icons/mastercard.png" alt="IMG-MASTERCARD">
+			</a>
+			<a href="#">
+				<img class="h-size2" src="../../static/images/icons/express.png" alt="IMG-EXPRESS">
+			</a>
+			<a href="#">
+				<img class="h-size2" src="../../static/images/icons/discover.png" alt="IMG-DISCOVER">
+			</a>
+			<div class="t-center s-text8 p-t-20">
+				<p>Copyright Â© 2022 All rights reserved. | Hayeg Mehdi & Ibtihal Moubarrad</p>
+			</div>
+		  </div>
+		</div>
+	</footer>
+
+</body>
+</html>
